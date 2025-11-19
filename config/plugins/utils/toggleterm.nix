@@ -1,6 +1,6 @@
 _: {
   plugins.toggleterm = {
-    enable = true;
+    enable = false;
     settings = {
       size = 20;
     };

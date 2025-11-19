@@ -1,6 +1,6 @@
 _: {
   plugins.copilot-chat = {
-    enable = true;
+    enable = false;
   };
 
   keymaps = [

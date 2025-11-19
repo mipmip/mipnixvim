@@ -1,7 +1,7 @@
 {
   plugins = {
     bufferline = {
-      enable = true;
+      enable = false;
       settings = {
         options = {
           diagnostics = "nvim_lsp";

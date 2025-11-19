@@ -26,7 +26,7 @@
       callback = {
         __raw = ''
           function()
-            vim.cmd('Startup')
+            -- vim.cmd('Startup')
           end
         '';
       };
@@ -36,8 +36,8 @@
       event = [ "FileType" ];
       pattern = [
         "help"
-        "Startup"
-        "startup"
+        #"Startup"
+        #"startup"
         "neo-tree"
         "Trouble"
         "trouble"
