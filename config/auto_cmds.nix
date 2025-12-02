@@ -4,6 +4,7 @@
     vim_enter = { };
     indentscope = { };
     restore_cursor = { };
+    buf_enter = { };
   };
 
   autoCmd = [
@@ -26,7 +27,24 @@
       callback = {
         __raw = ''
           function()
+            if vim.fn.argc() == 0 then
+              vim.cmd "Neotree toggle"
+            end
             -- vim.cmd('Startup')
+          end
+        '';
+      };
+    }
+    {
+      group = "buf_enter";
+      event = [ "FileType" ];
+      pattern = [
+        "markdown"
+      ];
+      callback = {
+        __raw = ''
+          function()
+            vim.diagnostic.enable(false)
           end
         '';
       };

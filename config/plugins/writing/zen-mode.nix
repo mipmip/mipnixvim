@@ -24,7 +24,7 @@
           cursorcolumn = true;
           foldcolumn = "0";
         };
-        width = 0.8;
+        width = 80;
       };
     };
 

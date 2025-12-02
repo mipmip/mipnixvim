@@ -3,6 +3,10 @@ _: {
     enable = true;
     settings = {
       options = {
+        component_separators.left = "|";
+        component_separators.right = "|";
+        section_separators.left = "";
+        section_separators.right = "";
         globalstatus = true;
         extensions = [
           "fzf"
@@ -14,7 +18,7 @@ _: {
             "alpha"
           ];
         };
-        theme = "catppuccin";
+        theme = "gruvbox";
       };
       sections = {
         lualine_a = [
@@ -50,35 +54,6 @@ _: {
           }
           {
             __unkeyed-1 = "navic";
-          }
-        ];
-        lualine_x = [
-          {
-            __unkeyed-1 = "filetype";
-            icon_only = true;
-            separator = "";
-            padding = {
-              left = 1;
-              right = 0;
-            };
-          }
-          {
-            __unkeyed-1 = "filename";
-            path = 1;
-          }
-          {
-            __unkeyed-1.__raw = ''
-              function()
-                local icon = " "
-                local status = require("copilot.api").status.data
-                return icon .. (status.message or " ")
-              end,
-
-              cond = function()
-               local ok, clients = pcall(vim.lsp.get_clients, { name = "copilot", bufnr = 0 })
-               return ok and #clients > 0
-              end,
-            '';
           }
         ];
         lualine_y = [

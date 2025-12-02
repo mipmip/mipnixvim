@@ -489,5 +489,13 @@
         desc = "Previous Tab";
       };
     }
+
+    {
+      mode = "n";
+      options.desc = "Set PencilSoft";
+      action = "<cmd>PencilSoft<cr>";
+      key = "<leader>sp";
+    }
+
   ];
 }

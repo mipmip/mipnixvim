@@ -6,6 +6,8 @@
 - linny
 - whitewriter
 
+- [ ] checkbox
+
 - custom pkg: https://github.com/khaneliman/khanelivim/tree/main/packages
 
 This repository contains my personal configuration NixVim, a Neovim configuration managed with Nix.

@@ -10,12 +10,15 @@
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
     };
+    import-tree.url = "github:vic/import-tree";
+
   };
 
   outputs =
     {
       nixpkgs,
       nixvim,
+      import-tree,
       flake-parts,
       pre-commit-hooks,
       ...
@@ -41,7 +44,12 @@
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
-            module = import ./config; # import the module directly
+            module = {
+              imports = [
+                (inputs.import-tree ./config)
+              ];
+            };
+            #module = import ./config; # import the module directly
             # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
               # inherit (inputs) foo;

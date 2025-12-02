@@ -1,7 +1,10 @@
 {
   colorschemes = {
-    catppuccin = {
+    gruvbox-baby = {
       enable = true;
+    };
+    catppuccin = {
+      enable = false;
       settings = {
         background = {
           light = "macchiato";
