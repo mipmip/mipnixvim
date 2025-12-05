@@ -21,11 +21,29 @@
           number = false;
           signcolumn = "no";
           cursorline = false;
-          cursorcolumn = true;
+          cursorcolumn = false;
           foldcolumn = "0";
         };
         width = 80;
       };
+      on_open = ''
+                function(win)
+                   vim.cmd.colorscheme('whitewriter') 
+                   vim.opt.relativenumber = false
+                   vim.opt.number = false
+        --           require('lualine').hide()
+                end
+      '';
+      on_close = ''
+                function(win)
+                   vim.cmd.colorscheme('gruvbox-baby') 
+                   vim.opt.relativenumber = true
+                   vim.opt.number = true
+        --           require('lualine').hide({
+        --               unhide = true,
+        --           })
+                end
+      '';
     };
 
     # twilight.enable = true; ## why is this here? zen mode has no twilight
