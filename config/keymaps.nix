@@ -3,6 +3,33 @@
 
   keymaps = [
     {
+      options = {
+        desc = "Fix all whitespace";
+      };
+
+      action = "<cmd>StripWhitespace<cr>";
+      key = "<Leader>w";
+      mode = [ "n" ];
+    }
+
+    {
+      options.desc = "Grep string under the cursor";
+      action = ''<cmd>Telescope grep_string<cr>'';
+      mode = [ "n" ];
+      key = "<C-]>";
+    }
+
+    {
+      options.desc = "Toggle Checkbox";
+      action = ''<cmd>lua require('toggle-checkbox').toggle()<cr>'';
+      mode = [
+        "n"
+        "x"
+      ];
+      key = "-";
+    }
+
+    {
       mode = [
         "n"
         "x"

@@ -44,7 +44,7 @@
       breakindent = true;
 
       # Highlight the screen line of the cursor
-      cursorline = true;
+      cursorline = false;
 
       # Minimum number of screen lines to keep above and below the cursor
       scrolloff = 8;

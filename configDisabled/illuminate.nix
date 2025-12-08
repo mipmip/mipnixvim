@@ -1,6 +1,6 @@
 {
   plugins.illuminate = {
-    enable = true;
+    enable = false;
     settings = {
       under_cursor = false;
       filetypes_denylist = [
