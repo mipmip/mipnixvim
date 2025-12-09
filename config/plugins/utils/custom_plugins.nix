@@ -3,6 +3,7 @@
   extraPlugins = [
     pkgs.vimPlugins.mkdx
     pkgs.vimPlugins.vim-better-whitespace
+    pkgs.vimPlugins.vim-eunuch
 
     #    pkgs.vimPlugins.markdown-nvim
     (pkgs.vimUtils.buildVimPlugin {
