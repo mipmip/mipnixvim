@@ -104,11 +104,14 @@
           ];
           lua = [ "stylua" ];
           nix = [ "nixfmt-rfc-style" ];
-          markdown = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
+
+          ## DISABLED FORMATTER FOR MARKDOWN. I WANT TO PLAY AROUND IN MARKDOWN
+          #          markdown = {
+          #            __unkeyed-1 = "prettierd";
+          #            __unkeyed-2 = "prettier";
+          #            stop_after_first = true;
+          #          };
+
           yaml = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";
