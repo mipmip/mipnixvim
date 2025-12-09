@@ -28,6 +28,10 @@
       tabstop = 2;
       softtabstop = 2;
 
+      undofile = true;
+      ignorecase = true;
+      smartcase = true;
+
       # Show tabline always
       showtabline = 2;
 
