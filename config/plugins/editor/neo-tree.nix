@@ -41,7 +41,7 @@
              if i > 0 then
                local result = results[i]
                if not result then return print('Invalid choice: ' .. i) end
-               os.execute('echo ' .. result .. '| xclip')
+               os.execute('echo ' .. result .. '| wl-copy')
                vim.notify('Copied: ' .. result)
              end
            end
